@@ -31,7 +31,8 @@ $paths = array(
     ],
 
     "helpers"=> [
-        "berkaPhp/Helpers/"
+        "berkaPhp/Helpers/",
+        "Cqudefus/Helpers/"
     ]
 );
 

@@ -39,5 +39,10 @@ class Session {
             session_start();
         }
     }
+
+    public static function kill() {
+        self::startSession();
+        session_destroy();
+    }
 }
 ?>

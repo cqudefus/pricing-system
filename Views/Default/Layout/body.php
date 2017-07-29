@@ -3,14 +3,17 @@
 		<!-- Head title -->
 		<?= berkaPhp\helpers\Element::load("Header")?>
 	</div>
-	<div class="col-xs-12 col-sm-6 col-lg-6 col-md-6 " id="content">
+	<div class="col-xs-12 col-sm-7 col-lg-7 col-md-7 " id="content">
 		{content}
 	</div>
     
-    <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6 ">
+    <div class="col-xs-12 col-sm-5 col-lg-5 col-md-5 ">
 		<!-- rigth element -->
 		<?= berkaPhp\helpers\Element::load("Price")?>
 	</div>
+</div>
+
+<div class="alert alert-success alert-msg hide">
 
 </div>
 

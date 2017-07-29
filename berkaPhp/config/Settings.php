@@ -5,9 +5,9 @@
 
     //Database settings
     define('SERVER', 'localhost', true);
-    define('DB', 'pricing_system', true);
+    define('DB', 'pricing_features', true);
     define('DB_USERNAME', 'root', true);
-    define('DB_PW', $_SERVER['SERVER_NAME']=='www.yourlivesite.com' ? '' : 'Brk1991@', true);
+    define('DB_PW', $_SERVER['SERVER_NAME']=='www.yourlivesite.com' ? '' : '', true);
 
     //default controller
     define('HOME', 'pages' , true);

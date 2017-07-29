@@ -29,17 +29,44 @@
 
         function step_2($params = '') {
 
-            $cat_ids = implode(",",SessionHelper::get("category"));
-            $features = DB::extractRows($this->dbInstance("SELECT * FROM features WHERE ref_cat_id IN (".$cat_ids.")"));
+            if(SessionHelper::exist('category')) {
 
-            $session_features = SessionHelper::get("feature");
-            $this->appView->set("session_features", $session_features);
-            $this->appView->set("features", $features);
+                $cat_ids = implode(",",SessionHelper::get("category"));
+                $features = DB::extractRows($this->dbInstance(
+                    "SELECT * FROM features JOIN feature_categories ON ref_cat_id = cat_id WHERE ref_cat_id IN (".$cat_ids.") ORDER BY ref_cat_id"
+                ));
+
+                $session_features = SessionHelper::exist('feature') ? SessionHelper::get("feature") : null;
+
+                if($session_features !== null) {
+                    $this->appView->set("session_features", $session_features);
+                }
+
+                $this->appView->set("features", $features);
+            }
+
 
             $this->appView->render_ajax();
         }
 
         function step_3($params = '') {
+
+            if(SessionHelper::exist('feature')) {
+
+                $feature_ids = implode(",",SessionHelper::get("feature"));
+                $options = DB::extractRows($this->dbInstance(
+                    "SELECT * FROM feature_options JOIN features ON op_ref_feature = id WHERE op_ref_feature IN (".$feature_ids.") ORDER BY op_ref_feature"
+                ));
+
+                $session_features = SessionHelper::exist('option') ? SessionHelper::get("option") : null;
+
+                if($session_features !== null) {
+                    $this->appView->set("session_options", $session_features);
+                }
+
+                $this->appView->set("options", $options);
+            }
+
             $this->appView->render_ajax();
         }
 
@@ -78,6 +105,11 @@
                 }
 
             }
+        }
+
+        function clear() {
+            \cqudefus\helpers\Session::kill();
+            \berkaPhp\helpers\RedirectHelper::redirect('/pages/index');
         }
 
 	}

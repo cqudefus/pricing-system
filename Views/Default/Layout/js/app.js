@@ -23,7 +23,8 @@ application.initPrice = function() {
                     action: action
                 },
                 success:function(data){
-                    alert(data.trim());
+                    $('.alert-msg').text(data.trim())
+                    application.initFlash();
 
                 },
                 error:function(){
@@ -34,4 +35,18 @@ application.initPrice = function() {
         });
 
     });
+};
+
+application.initFlash = function(){
+    $message = $('.alert-msg');
+
+    setTimeout(function() {
+        if($message.text().trim() != '') {
+            console.log("dkdk");
+            $message.removeClass('hide');
+            $message.fadeIn(100).delay(2000).fadeOut(150);
+        }
+
+    }, 100);
+
 };

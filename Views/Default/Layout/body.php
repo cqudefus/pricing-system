@@ -13,7 +13,7 @@
 	</div>
 </div>
 
-<div class="alert alert-success alert-msg hide">
+<div class="alert alert-info alert-msg hide">
 
 </div>
 

@@ -191,3 +191,14 @@ p label:hover:before {
     font-weight: bold;
     text-transform: capitalize;
 }
+
+.btn-bottom {
+    background-color: #337ab7!important;
+    color: #f7f7f7!important;
+    transition: all ease 0.2s;
+}
+
+.btn-bottom:hover {
+    background: #1f4567!important;
+    border: 1px solid #f7f7f7!important;
+}

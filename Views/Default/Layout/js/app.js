@@ -44,7 +44,7 @@ application.initFlash = function(){
         if($message.text().trim() != '') {
             console.log("dkdk");
             $message.removeClass('hide');
-            $message.fadeIn(100).delay(2000).fadeOut(150);
+            $message.fadeIn(100).delay(500).fadeOut(100);
         }
 
     }, 100);

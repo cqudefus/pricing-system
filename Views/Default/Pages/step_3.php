@@ -21,17 +21,20 @@
                         ?>
                         <div class="checkbox">
                             <p>
-
                                 <?php
                                 $is_checked = '';
                                 if(isset($template_data['session_options']) && is_array($template_data['session_options'])) {
-                                    $is_checked = array_search($options['id'], $template_data['session_options']) !== false ? 'checked' : '';
+                                    $is_checked = array_search($options['op_id'], $template_data['session_options']) !== false ? 'checked' : '';
                                 }
                                 ?>
 
-                                <input id="<?=$options['op_id']?>" data-update='feature' <?=$is_checked?> type="checkbox" value="<?=$options['op_id']?>" price="200"/>
+                                <input id="<?=$options['op_id']?>" data-update='option' <?=$is_checked?> type="checkbox" value="<?=$options['op_id']?>" price="200"/>
                                 <label for="<?=$options['op_id']?>"> <?=ucwords($options['op_name'])?> </label>
                             </p>
+
+                            <span class="price pull-right">
+                                R <?= $options['price']?>
+                            </span>
 
                             <?php if(!empty($feature['description'])):?>
                                 <span class="glyphicon glyphicon-info-sign info_icon" data-toggle="modal" data-target="#<?=$options['op_id']?>"></span>

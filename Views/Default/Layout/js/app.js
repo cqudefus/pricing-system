@@ -23,7 +23,10 @@ application.initPrice = function() {
                     action: action
                 },
                 success:function(data){
-                    $('.alert-msg').text(data.trim())
+                    if(group.trim() == "option") {
+                        $.cookie("updated", 1);
+                    }
+                    $('.alert-msg').text(data.trim());
                     application.initFlash();
 
                 },
@@ -45,6 +48,33 @@ application.initFlash = function(){
             console.log("dkdk");
             $message.removeClass('hide');
             $message.fadeIn(100).delay(500).fadeOut(100);
+        }
+
+    }, 100);
+
+};
+
+application.initPricePanel = function(){
+    var getUrl = "/price/refresh";
+    var panelName = "pricePanel";
+
+    setInterval(function() {
+        if (typeof $.cookie('updated') !== 'undefined') {
+
+            $.ajax({
+                url: getUrl,
+                type: "GET",
+                data: {},
+                success: function (data) {
+                    $('#' + panelName).html(data);
+                    $.removeCookie("updated");
+                },
+                error: function () {
+
+                }
+            });
+        } else{
+            //console.log("hfhfhfh");
         }
 
     }, 100);

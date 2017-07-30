@@ -73,6 +73,7 @@
     font-size: 12px;
     line-height: 1.428571429;
     border-radius: 15px;
+    border: 2px solid #f5f5f5;
 }
 
 .no-padding-left {
@@ -80,7 +81,7 @@
 }
 
 .progress {
-    background: #303b44;
+    background: #337ab7;;
     padding-bottom: 60px;
 
 }
@@ -201,4 +202,25 @@ p label:hover:before {
 .btn-bottom:hover {
     background: #1f4567!important;
     border: 1px solid #f7f7f7!important;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    /*background: #f2dede;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    border-right: 1px solid #e2c5c5;
+    background: #f5f5f5;
+    background: -moz-linear-gradient(45deg, #f5f5f5 42%, #f2dede 100%);
+    background: -webkit-linear-gradient(45deg, #f5f5f5 42%,#f2dede 100%);
+    background: linear-gradient(45deg, #f5f5f5 42%,#f2dede 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f2dede',GradientType=1 );
+}
+
+.price_panel {
+    padding-top: 18px;
+    padding-bottom: 18px;
 }

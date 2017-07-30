@@ -7,7 +7,7 @@
 		{content}
 	</div>
     
-    <div class="col-xs-12 col-sm-5 col-lg-5 col-md-5 ">
+    <div class="col-xs-12 col-sm-5 col-lg-5 col-md-5" id="pricePanel">
 		<!-- rigth element -->
 		<?= berkaPhp\helpers\Element::load("Price")?>
 	</div>

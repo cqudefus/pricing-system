@@ -8,6 +8,7 @@
 <script>
     $app.initBerkaPhp();
     application.initPrice();
+    application.initPricePanel();
     application.initFlash();
 </script>
 

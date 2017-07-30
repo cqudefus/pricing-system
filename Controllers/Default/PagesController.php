@@ -55,7 +55,9 @@
 
                 $feature_ids = implode(",",SessionHelper::get("feature"));
                 $options = DB::extractRows($this->dbInstance(
-                    "SELECT * FROM feature_options JOIN features ON op_ref_feature = id WHERE op_ref_feature IN (".$feature_ids.") ORDER BY op_ref_feature"
+                    "SELECT * FROM feature_options JOIN features ON op_ref_feature = id
+                    JOIN feature_prices ON op_price_id = price_id
+                    WHERE op_ref_feature IN (".$feature_ids.") ORDER BY op_ref_feature"
                 ));
 
                 $session_features = SessionHelper::exist('option') ? SessionHelper::get("option") : null;

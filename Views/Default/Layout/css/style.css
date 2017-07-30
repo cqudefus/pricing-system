@@ -229,3 +229,23 @@ p label:hover:before {
 .table_separator {
     background: #c7c7c7;
 }
+
+
+@media (max-width: 576px) {
+    #content, #pricePanel {
+        padding: 0;
+    }
+
+    .checkbox > p > label {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+
+    .list-title {
+        font-size: 19px;
+    }
+}
+

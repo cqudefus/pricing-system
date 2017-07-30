@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf3f390-0342-418f-bf4f-58bfd575e417" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Default/Assets/logocq.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Controllers/Default/AssetController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Default/Asset/html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Elements/Buttons.php" afterPath="$PROJECT_DIR$/Views/Elements/Buttons.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Default/PriceController.php" afterPath="$PROJECT_DIR$/Controllers/Default/PriceController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/berkaPhp/config/Settings.php" afterPath="$PROJECT_DIR$/berkaPhp/config/Settings.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Price/refresh.php" afterPath="$PROJECT_DIR$/Views/Default/Price/refresh.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Layout/css/style.css" afterPath="$PROJECT_DIR$/Views/Default/Layout/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pricing-system.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,10 +53,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="body.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Default/Layout/body.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="527">
+              <caret line="9" column="68" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="html.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Default/Asset/html.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22599705" vertical-offset="0" max-vertical-offset="1632">
+            <state vertical-scroll-proportion="3.9230769" vertical-offset="255" max-vertical-offset="1632">
               <caret line="9" column="107" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="107" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -125,21 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Views/Default/Pages/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="765">
-              <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/Default/Layout/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.75" vertical-offset="3256" max-vertical-offset="4012">
-              <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.8517442" vertical-offset="3613" max-vertical-offset="4369">
+              <caret line="247" column="21" selection-start-line="247" selection-start-column="21" selection-end-line="247" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -208,10 +200,10 @@
         <option value="$PROJECT_DIR$/Controllers/Default/PriceController.php" />
         <option value="$PROJECT_DIR$/Controllers/Default/AssestController.php" />
         <option value="$PROJECT_DIR$/Controllers/Default/AssetController.php" />
-        <option value="$PROJECT_DIR$/Views/Default/Layout/css/style.css" />
         <option value="$PROJECT_DIR$/berkaPhp/config/Settings.php" />
         <option value="$PROJECT_DIR$/Views/Default/Price/refresh.php" />
         <option value="$PROJECT_DIR$/Views/Default/Asset/html.php" />
+        <option value="$PROJECT_DIR$/Views/Default/Layout/css/style.css" />
       </list>
     </option>
   </component>
@@ -802,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Default/Layout/body.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="527">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/Layout/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1479">
@@ -885,14 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Default/Layout/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-22.75" vertical-offset="3256" max-vertical-offset="4012">
-          <caret line="229" column="4" selection-start-line="229" selection-start-column="4" selection-end-line="229" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/Layout/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="374">
@@ -919,7 +895,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/Asset/html.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22599705" vertical-offset="0" max-vertical-offset="1632">
+        <state vertical-scroll-proportion="3.9230769" vertical-offset="255" max-vertical-offset="1632">
           <caret line="9" column="107" selection-start-line="9" selection-start-column="107" selection-end-line="9" selection-end-column="107" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -956,6 +932,22 @@
             <marker date="1501441774308" expanded="true" signature="385:416" placeholder="..." />
             <marker date="1501441774308" expanded="true" signature="685:768" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Default/Layout/body.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="527">
+          <caret line="9" column="68" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Default/Layout/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8517442" vertical-offset="3613" max-vertical-offset="4369">
+          <caret line="247" column="21" selection-start-line="247" selection-start-column="21" selection-end-line="247" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

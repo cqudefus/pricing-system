@@ -4,7 +4,7 @@ use berkaPhp\Controller\AppController;
 use \berkaPhp\helpers\SessionHelper;
 use \cqudefus\helpers\DB;
 
-class PriceController extends AppController
+class AssetController extends AppController
 {
 
     function __construct()
@@ -12,7 +12,7 @@ class PriceController extends AppController
         parent::__construct(false);
     }
 
-    function refresh() {
+    function html() {
 
         if(SessionHelper::exist('option')) {
 
@@ -22,18 +22,15 @@ class PriceController extends AppController
 
                 $options = DB::extractRows($this->dbInstance(
                     "SELECT * FROM feature_options JOIN feature_prices ON op_price_id = price_id
-                    WHERE op_id IN (" . $option_ids . ") ORDER BY op_ref_feature"
+                    JOIN features ON op_ref_feature = id WHERE op_id IN (" . $option_ids . ") ORDER BY op_ref_feature"
                 ));
 
                 $this->appView->set("options", $options);
             }
         }
 
-       // $this->appView->set("option", SessionHelper::get('option'));
         $this->appView->render_ajax();
     }
-
-
 }
 
 ?>

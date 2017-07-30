@@ -205,22 +205,27 @@ p label:hover:before {
 }
 
 .price {
-    color: red;
+    color: whitesmoke;
     font-weight: bold;
     font-size: 20px;
-    /*background: #f2dede;*/
+    background: #f5f5f5;
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 5px;
-    border-right: 1px solid #e2c5c5;
+    border-right: 1px solid #337ab7;
     background: #f5f5f5;
     background: -moz-linear-gradient(45deg, #f5f5f5 42%, #f2dede 100%);
     background: -webkit-linear-gradient(45deg, #f5f5f5 42%,#f2dede 100%);
-    background: linear-gradient(45deg, #f5f5f5 42%,#f2dede 100%);
+    background: linear-gradient(45deg, #a6c3db 6%,#337ab7 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f2dede',GradientType=1 );
+
 }
 
 .price_panel {
     padding-top: 18px;
     padding-bottom: 18px;
+}
+
+.table_separator {
+    background: #c7c7c7;
 }

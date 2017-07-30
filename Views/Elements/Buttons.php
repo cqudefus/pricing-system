@@ -6,7 +6,7 @@
         <?php if($passed_data['step'] != 'step_3') :?>
             <li class="pull-left">&nbsp;<button type="button" class="btn btn-primary" data-ajax = "/pages/<?=$passed_data['next']?>" panel="content">Next</button></li>
         <?php endif ?>
-        <li class="pull-right"><button type="button" class="btn btn-default" href="/pages/clear">Clear</button></li>
+        <li class="pull-right"><button type="button" class="btn btn-default" ><a href="/pages/clear">Clear</a></button></li>
     </ul>
 </div>
 <script>

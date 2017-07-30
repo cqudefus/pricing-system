@@ -17,7 +17,7 @@
     define('LOGIN_URL', '' , true);
 
     define('SITE_URL', 'www.yourlivesite.com' , true);
-    define('LOGO_URL', '/Views/Default/Assets/logo.png' , true);
+    define('LOGO_URL', '/Views/Default/Assets/logocq.png' , true);
 
 
 ?>

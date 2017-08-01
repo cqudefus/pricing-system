@@ -18,6 +18,7 @@ $paths = array(
 
     "components"=> [
         "berkaPhp/Controllers/Components/",
+        "Controllers/Components/ComponentFiles/Email/",
         "Controllers/Components/"
     ],
 

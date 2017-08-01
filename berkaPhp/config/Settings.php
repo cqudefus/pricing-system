@@ -19,6 +19,14 @@
     define('SITE_URL', 'www.yourlivesite.com' , true);
     define('LOGO_URL', '/Views/Default/Assets/logocq.png' , true);
 
+    //mailer settings
+    define('EMAIL_HOST', 'mail.cqudefus.com' , true);
+    define('EMAIL_USER', 'noreply@cqudefus.com' , true);
+    define('EMAIL_PASSWORD', '@qwerty2017' , true);
+    define('WORDWRAP', 50 , true);
+    define('NO_REPLY', 'noreply@cqudefus.com' , true);
+
+
 
 ?>
 

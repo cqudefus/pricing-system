@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style type="text/css">
+        @media (max-width: 576px){
+            table{
+                width: 100%!important;
+            }
 
+            *{
+                font-size: 12px!important;
+            }
+        }
+    </style>
 </head>
 <body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
 
-<table align="center" style="padding: 20px;border: 1px solid #f7f7f7;margin-top: 65px;width: 70%;">
+<table align="center" style="padding: 20px;border: 2px solid #f7f7f7;margin-top: 10px;width: 55%;border-radius: 10px;">
     <tr>
-        <td><img src="<?=LOGO_URL?>" alt="" style="position: relative;left: -17px;padding-bottom: 25px;width: 209px;"/></td>
+        <td>
+<!--            <img src="--><?//=LOGO_URL?><!--" alt="" style="position: relative;left: -17px;padding-bottom: 25px;width: 209px;"/>-->
+        </td>
     </tr>
     <tr>
         <td>
             <table border="0" style="border:0px; border-collapse: collapse;font-weight: normal;width: 100%;">
                 <thead>
-                <tr>
+                <tr style="background: #4e4e4e;height: 53px;border-bottom: 18px solid white;color: lightgoldenrodyellow;">
                     <th style="padding: 5px; text-align: left">Name</th>
                     <th style="padding: 5px;text-align: left">Estimated Hours</th>
                     <th style="padding: 5px;text-align: left">Price</th>
@@ -77,6 +89,7 @@
                 <?php endif ?>
                 </tbody>
             </table>
+            <br/>
             <br/>
             <table style="width: 100%;">
                 <tr>

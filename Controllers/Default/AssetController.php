@@ -5,12 +5,14 @@ use \berkaPhp\helpers\SessionHelper;
 use \cqudefus\helpers\DB;
 use \berkaPhp\helpers;
 
-class AssetController extends AppController
-{
+class AssetController extends AppController {
 
+    private $mailer;
     function __construct()
     {
         parent::__construct(false);
+
+        $this->mailer = $this->loadComponent("Email");
     }
 
     function html() {
@@ -20,7 +22,6 @@ class AssetController extends AppController
         if(SessionHelper::exist('option')) {
 
             $option_ids = implode(",",SessionHelper::get("option"));
-
             if(!empty($option_ids)) {
 
                 $options = DB::extractRows($this->dbInstance(
@@ -31,9 +32,18 @@ class AssetController extends AppController
                 $this->appView->set("requested_id", $requested_id);
                 $this->appView->set("options", $options);
             }
+
         }
 
-        $this->appView->renderAjax();
+        $content = $this->appView->renderGetContent();
+        $is_sent = $this->mailer->send("cqudefus", "Quote", "Quote", $content, "ayowaberka@gmail.com");
+
+        if($is_sent) {
+            echo 'sent';
+        }
+
+
+       $this->appView->renderAjax();
     }
 
     function downloadPdf() {

@@ -20,7 +20,7 @@
             $this->appView->set("categories", $feature_categories);
 
             if(isset($params['params']) && $params['params'] == 'back') {
-                $this->appView->render_ajax();
+                $this->appView->renderAjax();
             } else {
                 $this->appView->render();
             }
@@ -46,7 +46,7 @@
             }
 
 
-            $this->appView->render_ajax();
+            $this->appView->renderAjax();
         }
 
         function step_3($params = '') {
@@ -69,7 +69,7 @@
                 $this->appView->set("options", $options);
             }
 
-            $this->appView->render_ajax();
+            $this->appView->renderAjax();
         }
 
         function update() {

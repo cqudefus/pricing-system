@@ -30,7 +30,7 @@ class PriceController extends AppController
         }
 
        // $this->appView->set("option", SessionHelper::get('option'));
-        $this->appView->render_ajax();
+        $this->appView->renderAjax();
     }
 
 

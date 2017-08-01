@@ -156,7 +156,7 @@ class AppView
         require($_SERVER['DOCUMENT_ROOT'].'/Views/'.PREFIX.'/Layout/footer.php');
 	}
 
-    public function render_ajax($option = array()) {
+    public function renderAjax($option = array()) {
 
         $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
         $view_to_render =  $trace[count($trace) - 1]['function'];
@@ -183,6 +183,44 @@ class AppView
         $content = ob_get_contents();
         ob_end_clean();
         echo $content;
+
+    }
+
+    public function renderGetContent($path = '') {
+
+        $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS, 2);
+        $view_to_render =  $trace[count($trace) - 1]['function'];
+        $called_controller =  $trace[count($trace) - 1]['class'];
+
+        /* fetches all data from database
+        * @access public
+        * @param  [$query] array f parameters
+        */
+        $called_controller = str_replace('Controller','',$called_controller);
+        $called_controller = str_replace('controller','',$called_controller);
+        $called_controller = str_replace('\\','',$called_controller);
+        $called_controller = trim($called_controller);
+
+        $template_data = $this->data;
+        $meta_data = $this->meta_tags;
+
+        if(empty($path)) {
+            $path = $called_controller.'/'.$view_to_render;
+        }
+
+        if(sizeof($this->data) > 0){
+            extract($this->data);
+        }
+
+        /* fetches all data from database
+        * @access public
+        * @param  [$query] array f parameters
+        */
+        ob_start();
+        require($_SERVER['DOCUMENT_ROOT'].'/Views/'.PREFIX.'/'.$path.'.php');
+        $content = ob_get_contents();
+        ob_end_clean();
+        return $content;
 
     }
 

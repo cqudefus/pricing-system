@@ -54,9 +54,12 @@
                             </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-default">
-                                <span class=""></span>Download PDF
-                            </button></td>
+                            <a href="/asset/downloadPdf" target="_blank">
+                                <button type="button" class="btn btn-default">
+                                    <span class=""></span>Download PDF
+                                </button>
+                            </a>
+                        </td>
                         <td>
                             <button type="button" class="btn btn-success">
                                 Get In touch <span class=""></span>

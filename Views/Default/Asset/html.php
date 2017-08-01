@@ -4,7 +4,11 @@
 
 </head>
 <body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-<table align="center" style="padding: 20px;border: 1px solid #f3f3f3;margin-top: 65px;">
+
+<table align="center" style="padding: 20px;border: 1px solid #f7f7f7;margin-top: 65px;width: 70%;">
+    <tr>
+        <td><img src="<?=LOGO_URL?>" alt="" style="position: relative;left: -17px;padding-bottom: 25px;width: 209px;"/></td>
+    </tr>
     <tr>
         <td>
             <table border="0" style="border:0px; border-collapse: collapse;font-weight: normal;width: 100%;">
@@ -57,7 +61,7 @@
                     </tr>
                     <tr>
                         <td style="border: 0;padding: 5px">
-
+                            Requested ID : <?= $template_data['requested_id'] ?>
                         </td>
                         <td style="border: 0;padding: 5px">
                             <button type="button" class="btn btn-default">
@@ -74,10 +78,10 @@
                 </tbody>
             </table>
             <br/>
-            <table>
+            <table style="width: 100%;">
                 <tr>
-                    <td style="font-family:Helvetica,arial,sans-serif;font-size:13px;color:#9a9a9a;text-align:center;line-height:18px">
-                        We are happy to answer any questions that you have via email <a href="?&amp;cs=wh&amp;v=b&amp;to=service@zando.co.za" style="text-decoration:none!important;color:#337ab7" target="_blank" rel="noreferrer">service@berka-ayowa.com</a><br>
+                    <td style="width:100%;font-family:Helvetica,arial,sans-serif;font-size:13px;color:#9a9a9a;text-align:center;line-height:18px">
+                        We are happy to answer any questions that you have via email <a href="?&amp;cs=wh&amp;v=b&amp;to=service@zando.co.za" style="text-decoration:none!important;color:#337ab7" target="_blank" rel="noreferrer">service@berka-ayowa.com</a>
                         or <span style="color:#337ab7">phone 086 556 4444</span>. Our support team will get back to you as quickly as possible.
                     </td>
                 </tr>

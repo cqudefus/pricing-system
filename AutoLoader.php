@@ -3,6 +3,10 @@
 
 $paths = array(
 
+    "library"=>[
+        'Controllers/Components/ComponentFiles/DompPdf/'
+    ],
+
     "route"=>[
         "berkaPhp/config/Router/"
     ],
@@ -36,6 +40,10 @@ $paths = array(
         "Cqudefus/Helpers/"
     ]
 );
+
+$except = [
+    'dompdf'
+]
 
 ?>
 

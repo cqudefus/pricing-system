@@ -5,6 +5,7 @@
         @media (max-width: 576px){
             table{
                 width: 100%!important;
+                padding: 5px;
             }
 
             *{
@@ -13,12 +14,11 @@
         }
     </style>
 </head>
-<body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<body style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background: gray;">
 
-<table align="center" style="padding: 20px;border: 2px solid #f7f7f7;margin-top: 10px;width: 55%;border-radius: 10px;">
+<table align="center" style="padding: 20px;border: 2px solid #f7f7f7;margin-top: 15px;width: 600px;border-radius: 5px;background: #ffffff;">
     <tr>
         <td>
-<!--            <img src="--><?//=LOGO_URL?><!--" alt="" style="position: relative;left: -17px;padding-bottom: 25px;width: 209px;"/>-->
         </td>
     </tr>
     <tr>
@@ -62,7 +62,7 @@
                     <?php endforeach ?>
 
                     <tr style="border-top: 15px solid #ffffff;">
-                        <td style="border: 0;padding: 5px"> </td>
+                        <td style="border: 0;padding: 5px"><img src="<?=LOGO_URL?>" alt="" style="opacity: 0.06;position: relative;left: -17px;padding-bottom: 25px;width: 209px;"/></td>
                         <td style="border: 0;padding: 5px"><h4>Total Hours</h4> </td>
                         <td style="border: 0;padding: 5px"><h4><?=$total_hours?></h4></td>
                     </tr>

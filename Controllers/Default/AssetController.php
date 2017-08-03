@@ -4,6 +4,8 @@ use berkaPhp\Controller\AppController;
 use \berkaPhp\helpers\SessionHelper;
 use \cqudefus\helpers\DB;
 use \berkaPhp\helpers;
+use Dompdf\Dompdf;
+
 
 class AssetController extends AppController {
 
@@ -35,11 +37,13 @@ class AssetController extends AppController {
 
         }
 
-        $content = $this->appView->renderGetContent();
-        $is_sent = $this->mailer->send("cqudefus", "Quote", "Quote", $content, "ayowaberka@gmail.com");
 
-        if($is_sent) {
-            echo 'sent';
+        //ayowaberka@gmail.com
+        $content = $this->appView->renderGetContent();
+        //$is_sent = $this->mailer->send("cqudefus", "Quote", "", $content, "ayowaberka@gmail.com");
+
+        if($is_sent=1) {
+           //s echo 'sent';
         }
 
 
@@ -53,7 +57,6 @@ class AssetController extends AppController {
         if(SessionHelper::exist('option')) {
 
             $option_ids = implode(",",SessionHelper::get("option"));
-
             if(!empty($option_ids)) {
 
                 $options = DB::extractRows($this->dbInstance(
@@ -65,17 +68,31 @@ class AssetController extends AppController {
                 $this->appView->set("options", $options);
             }
 
-            $content = $this->appView->renderGetContent("Asset/html");
+            $content = $this->appView->renderGetContent();
+            $file_name = "pdf".$requested_id.'.pdf';
+            $file_path = "Temp/pdf/".$file_name;
 
-            $file_name = "pdf".$requested_id.'.html';
-            $file_path = "Temp/html/".$file_name;
+            setlocale(LC_NUMERIC, "C");
+            $dompdf = new DOMPDF();
+            $dompdf->loadHtml($content);
+            $dompdf->setPaper('A4', 'portrait');
+            $dompdf->render();
 
-            if(\berkaPhp\helpers\FileStream::writeFile($file_path, $content)) {
+            $pdf_content = $dompdf->output();
+            file_put_contents($file_path,$pdf_content);
 
-            } else {
-                echo "error";
-            }
+            header('Content-Type: application/pdf;');
+            header('Content-Disposition: attachment; filename='.$file_name);
+            header("Pragma: no-cache");
+            readfile($file_path);
+            exit;
+
         }
+
+
+    }
+
+    function pdf() {
 
 
     }

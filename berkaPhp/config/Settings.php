@@ -1,13 +1,15 @@
 <?php
 	namespace berkaPhp\config;
 
-    define('DEBUG', true, true);
+    $site_url = ($_SERVER['SERVER_NAME']=='www.pr.berka-ayowa.com') ? 'http://www.pr.berka-ayowa.com': "http://dev.b.com";
+
+    define('DEBUG', false, true);
 
     //Database settings
     define('SERVER', 'localhost', true);
     define('DB', 'pricing_features', true);
     define('DB_USERNAME', 'root', true);
-    define('DB_PW', $_SERVER['SERVER_NAME']=='www.yourlivesite.com' ? '' : '', true);
+    define('DB_PW', $site_url =='http://www.pr.berka-ayowa.com' ? '' : '', true);
 
     //default controller
     define('HOME', 'pages' , true);
@@ -16,8 +18,8 @@
     define('DEFAULT_PREFIX', 'Default' , true);
     define('LOGIN_URL', '' , true);
 
-    define('SITE_URL', 'www.yourlivesite.com' , true);
-    define('LOGO_URL', '/Views/Default/Assets/logocq.png' , true);
+    define('SITE_URL', $site_url , true);
+    define('LOGO_URL', $site_url.'/Views/Default/Assets/logocq.png' , true);
 
     //mailer settings
     define('EMAIL_HOST', 'mail.cqudefus.com' , true);

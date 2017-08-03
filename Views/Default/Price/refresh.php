@@ -47,7 +47,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="/asset/html" target="_blank">
+                            <a target="_blank" data-toggle="modal" data-target="#forward">
                                 <button type="button" class="btn btn-default">
                                     <span class=""></span>Forward to me
                                 </button>
@@ -72,3 +72,23 @@
         </div>
     </div>
 </div>
+
+<div id="forward" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Enter your email</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" name="email" placeholder="Email address" class="form-control"/>
+                <br/>
+                <button class="btn btn-default">Sent</button>
+            </div>
+            <div class="modal-footer">
+                <!--                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            </div>
+        </div>
+
+    </div>

@@ -17,37 +17,40 @@ class AssetController extends AppController {
         $this->mailer = $this->loadComponent("Email");
     }
 
-    function html() {
+    function email() {
 
-        $requested_id = \cqudefus\helpers\Rand::uniqueDigit();
+        if($this->is_set($this->getPost())) {
 
-        if(SessionHelper::exist('option')) {
+            $requested_id = \cqudefus\helpers\Rand::uniqueDigit();
+            if(SessionHelper::exist('option')) {
 
-            $option_ids = implode(",",SessionHelper::get("option"));
-            if(!empty($option_ids)) {
+                $option_ids = implode(",",SessionHelper::get("option"));
 
-                $options = DB::extractRows($this->dbInstance(
-                    "SELECT * FROM feature_options JOIN feature_prices ON op_price_id = price_id
-                    JOIN features ON op_ref_feature = id WHERE op_id IN (" . $option_ids . ") ORDER BY op_ref_feature"
-                ));
+                if(!empty($option_ids)) {
+                    $options = DB::extractRows($this->dbInstance(
+                        "SELECT * FROM feature_options JOIN feature_prices ON op_price_id = price_id
+                        JOIN features ON op_ref_feature = id WHERE op_id IN (" . $option_ids . ") ORDER BY op_ref_feature"
+                    ));
 
-                $this->appView->set("requested_id", $requested_id);
-                $this->appView->set("options", $options);
+                    $this->appView->set("requested_id", $requested_id);
+                    $this->appView->set("options", $options);
+                }
+
             }
 
+            $content = $this->appView->renderGetContent('Asset/html');
+            $is_sent = $this->mailer->send("cqudefus", "Quote", "", $content, $this->getPost()['email']);
+
+            if($is_sent) {
+                echo 'Email has been successfully sent';
+            } else {
+                echo 'opp Something went wrong, try again';
+            }
+
+        } else {
+            echo 'invalid method';
         }
 
-
-        //ayowaberka@gmail.com
-        $content = $this->appView->renderGetContent();
-        //$is_sent = $this->mailer->send("cqudefus", "Quote", "", $content, "ayowaberka@gmail.com");
-
-        if($is_sent=1) {
-           //s echo 'sent';
-        }
-
-
-       $this->appView->renderAjax();
     }
 
     function downloadPdf() {

@@ -230,6 +230,41 @@ p label:hover:before {
     background: #c7c7c7;
 }
 
+.loading {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+    padding-right: 17px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    background: rgba(0, 0, 0, 0.63);
+
+}
+
+.content-holder {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 205px;
+    margin-top: 14px;
+}
+
+.text-area {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: 10px;
+
+}
+
+.hover-f-hidden {
+    overflow: hidden!important;
+}
 
 @media (max-width: 576px) {
     #content, #pricePanel {
@@ -248,4 +283,6 @@ p label:hover:before {
         font-size: 19px;
     }
 }
+
+
 

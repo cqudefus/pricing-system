@@ -22,7 +22,7 @@ application.initPrice = function() {
                     group: group,
                     action: action
                 },
-                success:function(data){
+                success: function(data){
                     if(group.trim() == "option") {
                         $.cookie("updated", 1);
                     }
@@ -30,7 +30,7 @@ application.initPrice = function() {
                     application.initFlash();
 
                 },
-                error:function(){
+                error: function(){
 
                 }
             });
@@ -47,7 +47,7 @@ application.initFlash = function(){
         if($message.text().trim() != '') {
             console.log("dkdk");
             $message.removeClass('hide');
-            $message.fadeIn(100).delay(500).fadeOut(100);
+            $message.fadeIn(100).delay(400).fadeOut(100);
         }
 
     }, 100);
@@ -75,6 +75,63 @@ application.initPricePanel = function(){
             });
         } else{
             //console.log("hfhfhfh");
+        }
+
+    }, 100);
+
+};
+
+application.initSendEmail = function(){
+  $('#send').on('click', function() {
+
+      var emailAddress = $('#email').val();
+
+      if(emailAddress.trim() != '') {
+
+          $('.forward [data-dismiss]').trigger('click');
+
+          $('.processing_msg').text("Email ");
+          $('.loading').fadeIn(120);
+          $('body').addClass('hover-f-hidden');
+
+          $.ajax({
+              url: '/asset/email',
+              type: "POST",
+              data: {
+                  email: emailAddress
+              },
+              success: function (data) {
+
+                  $('.loading').fadeOut(120);
+                  $('body').removeClass('hover-f-hidden');
+
+                  $('.alert.alert-info.alert-msg').text(myTrim(data));
+                  application.initFlashlong();
+                  console.log(myTrim(data));
+              },
+              error: function (data) {
+                  $('.loading').fadeOut(120);
+                  $('body').removeClass('hover-f-hidden');
+                  $('.alert-msg').text(data);
+                  application.initFlashlong();
+              }
+          });
+      }
+
+  });
+
+    function myTrim(x) {
+        return x.replace(/^\s+|\s+$/gm,'');
+    }
+};
+
+application.initFlashlong = function(){
+    $message = $('.alert-msg');
+
+    setTimeout(function() {
+        if($message.text().trim() != '') {
+            $message.removeClass('hide');
+            $message.fadeIn(100).delay(7500).fadeOut(100);
         }
 
     }, 100);

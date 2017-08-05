@@ -86,7 +86,6 @@ class AssetController extends AppController {
 
             header('Content-Type: application/pdf;');
             header('Content-Disposition: attachment; filename='.$file_name);
-            header("Pragma: no-cache");
             readfile($file_path);
             exit;
 
@@ -95,8 +94,40 @@ class AssetController extends AppController {
 
     }
 
-    function pdf() {
+    function viewPdf() {
 
+        $requested_id = \cqudefus\helpers\Rand::uniqueDigit();
+
+        if(SessionHelper::exist('option')) {
+
+            $option_ids = implode(",", SessionHelper::get("option"));
+            if (!empty($option_ids)) {
+
+                $options = DB::extractRows($this->dbInstance(
+                    "SELECT * FROM feature_options JOIN feature_prices ON op_price_id = price_id
+                    JOIN features ON op_ref_feature = id WHERE op_id IN (" . $option_ids . ") ORDER BY op_ref_feature"
+                ));
+
+                $this->appView->set("requested_id", $requested_id);
+                $this->appView->set("options", $options);
+            }
+
+            $content = $this->appView->renderGetContent('Asset/downloadPdf');
+            $file_name = "pdf" . $requested_id . '.pdf';
+            $file_path = "Temp/pdf/" . $file_name;
+
+            setlocale(LC_NUMERIC, "C");
+            $dompdf = new DOMPDF();
+            $dompdf->loadHtml($content);
+            $dompdf->setPaper('A4', 'portrait');
+            $dompdf->render();
+
+            $pdf_content = $dompdf->output();
+
+            header('Content-Type: application/pdf;');
+            echo $pdf_content;
+            exit;
+        }
 
     }
 

@@ -61,9 +61,11 @@
                             </a>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-success">
-                                Get In touch <span class=""></span>
-                            </button>
+                            <a href="/asset/viewPdf" target="_blank">
+                                <button type="button" class="btn btn-success">
+                                    View PDF <span class=""></span>
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 <?php endif ?>

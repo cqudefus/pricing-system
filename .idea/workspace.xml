@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbf3f390-0342-418f-bf4f-58bfd575e417" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Views/Default/Assets/loader.gif" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controllers/Default/AssetController.php" afterPath="$PROJECT_DIR$/Controllers/Default/AssetController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Layout/js/app.js" afterPath="$PROJECT_DIR$/Views/Default/Layout/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Layout/footer.php" afterPath="$PROJECT_DIR$/Views/Default/Layout/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Asset/html.php" afterPath="$PROJECT_DIR$/Views/Default/Asset/html.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Price/refresh.php" afterPath="$PROJECT_DIR$/Views/Default/Price/refresh.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Views/Default/Layout/css/style.css" afterPath="$PROJECT_DIR$/Views/Default/Layout/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="pricing-system.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,25 +28,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AssetController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AssetController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controllers/Default/AssetController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-23.923077" vertical-offset="228" max-vertical-offset="1887">
-              <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.7536232" vertical-offset="1656" max-vertical-offset="2414">
+              <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
               <folding>
                 <element signature="e#28#66#0#PHP" expanded="true" />
-                <marker date="1501930170253" expanded="true" signature="769:966" placeholder="SELECT * FRO..feature_options..." />
-                <marker date="1501930170253" expanded="true" signature="1920:2113" placeholder="SELECT * FRO..feature_options..." />
+                <marker date="1501932855336" expanded="true" signature="769:966" placeholder="SELECT * FRO..feature_options..." />
+                <marker date="1501932855336" expanded="true" signature="1920:2113" placeholder="SELECT * FRO..feature_options..." />
+                <marker date="1501932855336" expanded="true" signature="3272:3465" placeholder="SELECT * FRO..feature_options..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppComponent.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AppComponent.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/berkaPhp/Controllers/Components/AppComponent.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22173913" vertical-offset="0" max-vertical-offset="901">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="901">
               <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="refresh.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Default/Price/refresh.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.423077" vertical-offset="763" max-vertical-offset="1768">
+              <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -158,9 +163,9 @@
         <option value="$PROJECT_DIR$/Views/Default/Layout/footer.php" />
         <option value="$PROJECT_DIR$/Views/Default/Layout/css/style.css" />
         <option value="$PROJECT_DIR$/Views/Default/Asset/html.php" />
-        <option value="$PROJECT_DIR$/Controllers/Default/AssetController.php" />
         <option value="$PROJECT_DIR$/Views/Default/Layout/js/app.js" />
         <option value="$PROJECT_DIR$/Views/Default/Price/refresh.php" />
+        <option value="$PROJECT_DIR$/Controllers/Default/AssetController.php" />
       </list>
     </option>
   </component>
@@ -245,6 +250,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pricing-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pricing-system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Price" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,7 +388,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -369,7 +396,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2377892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2377892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -747,18 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controllers/Default/AssetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.923077" vertical-offset="228" max-vertical-offset="1887">
-          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-          <folding>
-            <element signature="e#28#66#0#PHP" expanded="true" />
-            <marker date="1501930170253" expanded="true" signature="769:966" placeholder="SELECT * FRO..feature_options..." />
-            <marker date="1501930170253" expanded="true" signature="1920:2113" placeholder="SELECT * FRO..feature_options..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Views/Default/Layout/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1732" max-vertical-offset="2448">
@@ -767,21 +782,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Default/Price/refresh.php">
+    <entry file="file://$PROJECT_DIR$/berkaPhp/Controllers/Components/AppComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6057971" vertical-offset="1044" max-vertical-offset="1734">
-          <caret line="86" column="87" selection-start-line="86" selection-start-column="87" selection-end-line="86" selection-end-column="87" />
-          <folding>
-            <element signature="n#style#0;n#button#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="901">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/berkaPhp/Controllers/Components/AppComponent.php">
+    <entry file="file://$PROJECT_DIR$/Views/Default/Price/refresh.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22173913" vertical-offset="0" max-vertical-offset="901">
-          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        <state vertical-scroll-proportion="-16.423077" vertical-offset="763" max-vertical-offset="1768">
+          <caret line="70" column="30" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controllers/Default/AssetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7536232" vertical-offset="1656" max-vertical-offset="2414">
+          <caret line="128" column="17" selection-start-line="128" selection-start-column="17" selection-end-line="128" selection-end-column="17" />
+          <folding>
+            <element signature="e#28#66#0#PHP" expanded="true" />
+            <marker date="1501932855336" expanded="true" signature="769:966" placeholder="SELECT * FRO..feature_options..." />
+            <marker date="1501932855336" expanded="true" signature="1920:2113" placeholder="SELECT * FRO..feature_options..." />
+            <marker date="1501932855336" expanded="true" signature="3272:3465" placeholder="SELECT * FRO..feature_options..." />
+          </folding>
         </state>
       </provider>
     </entry>
